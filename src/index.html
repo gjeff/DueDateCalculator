@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Due Date Calculator</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<!-- Place favicon.ico in the root directory -->
+
+		<!--        <link rel="stylesheet" href="css/normalize.css">    -->
+
+		<!--  JQuery Mobile stylesheets  -->
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+		<link rel="stylesheet" href="css/jquery.mobile.external-png-1.4.5.min.css">
+		<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css">
+		<link rel="stylesheet" href="css/jquery.mobile.inline-png-1.4.5.min.css">
+		<link rel="stylesheet" href="css/jquery.mobile.inline-svg-1.4.5.min.css">
+
+		<link rel="stylesheet" href="css/themes/GrayTheme.min.css">
+		<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css">		
+		<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css">
+<!--		<link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.min.css">   -->
+
+		<!-- JQuery UI stylesheets -->
+		<link rel="stylesheet" href="css/jquery-ui.min.css">
+		<link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+		<link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+
+		<!-- JQuery Mobile Datepicker Stylesheets -->
+		<link rel="stylesheet" href="css/jquery.mobile.datepicker.css">
+		<link rel="stylesheet" href="css/jquery.mobile.datepicker.theme.css">
+
+		<link rel="stylesheet" href="css/main.css">
+
+		<script src="js/vendor/jquery-1.11.3.min.js"></script>
+
+		<script src="js/vendor/jquery.ui.datepicker.js"></script>
+		<script src="js/vendor/jquery.mobile-git.js"></script>
+		<script src="js/vendor/jquery.mobile.datepicker.js"></script>
+
+		<script type="text/javascript" src="http://dev.jtsage.com/jquery.mousewheel.min.js"></script>
+		<script src="js/vendor/jqm-spinbox.js"></script>
+
+		<script src="js/plugins.js"></script>
+		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+		<script src="js/main.js"></script>
+
+	</head>
+	<body onload="initializeValues()">
+		<!-- Initial App Page -->
+		<div data-role="page" id="startPage">
+			<div data-role="header" id="startPageHeaderDiv">
+				<h3 id="startPageHeaderText">Due Date Calculator</h3>
+			</div>
+			<div id="startPageMainDiv" data-role="content" class="ui-content">
+				<div data-role="fieldcontain">
+					<label for="pregCheckDate" data-inline="true">Preg Check Date</label>
+					<input id="pregCheckDate" name="pregCheckDate" type="text" class="date-input" data-inline="false" data-role="date" onchange="updateDueDate()">
+				</div>
+
+				<div class="ui-field-contain">
+					<label for="daysBred">Days Bred</label>
+					<input type="text" data-role="spinbox" name="daysBred" id="daysBred" value="30" onchange="updateDueDate()"/>
+				</div>
+
+				<div class="ui-field-contain">
+					<label for="dueDate">Due Date</label>
+					<input id="dueDate" name="dueDate" readonly="readonly" type="text">
+				</div>
+
+				<!--					<a href="#" class="ui-btn ui-shadow-inset ui-corner-all" id="divHelp">Help</a>     -->
+			</div>
+			<div data-role="footer" data-position="fixed" data-tap-toggle="false">
+
+				<div data-role="collapsible" data-collapsed-icon="grid" data-expanded-icon="arrow-d" data-mini="true" >
+					<h1>
+					<div id="gestationPeriodLabel">
+						Gestation Period - 283 Days
+					</div></h1>
+					<div class="ui-field-contain">
+						<label for="gestationPeriod">Gestation Period</label>
+						<input type="text" data-role="spinbox" name="gestationPeriod" id="gestationPeriod" onchange="updateGestationPeriod()"/>
+					</div>
+
+
+					<ul data-role="listview" data-mini="true">
+						<li data-icon="false">
+							<a onclick="selectAnimal(283)" href="#">Cow - 283 days</a>
+						</li>
+						<li data-icon="false">
+							<a onclick="selectAnimal(350)" href="#">Horse - 340 to 360 days</a>
+						</li>
+						<li data-icon="false">
+							<a onclick="selectAnimal(114)" href="#">Pig - 114 days</a>
+						</li>
+						<li data-icon="false">
+							<a onclick="selectAnimal(128)" href="#">Sheep – 112 to 145 days</a>
+						</li>
+						<li data-icon="false">
+							<a onclick="selectAnimal(150)" href="#">Goat – 150 days</a>
+						</li>
+						<li data-icon="false">
+							<a onclick="selectAnimal(266)" href="#">Human – 266 days</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+	</body>
+</html>
