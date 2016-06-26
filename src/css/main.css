@@ -88,7 +88,19 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
+.ui-block-a, .ui-block-b, .ui-block-c{
+	text-align: center;
+    padding: 0px;
+}
+.ui-block-a{
+    width: 17% !important;
+}
+.ui-block-b {
+    width: 70% !important;
+}
+.ui-block-c {
+    width: 12% !important;
+}
 
 
 

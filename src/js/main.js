@@ -38,3 +38,21 @@ function selectAnimal(newNumber) {
 function updateGestationPeriod(){
 	selectAnimal($("#gestationPeriod").val());	
 }
+
+function openConceptionDate(){
+	$("#conceptionDateDiv").show();
+	$('#conceptionDate').datepicker("show");
+}
+
+function setConceptionDate(){
+	var _MS_PER_DAY = 1000 * 60 * 60 * 24;
+	var conceptionDate = new Date($("#conceptionDate").val());
+	var pregCheckDate = new Date($("#pregCheckDate").val());
+
+    var daysBred = Math.floor((pregCheckDate - conceptionDate) / _MS_PER_DAY); 
+    $("#daysBred").val(daysBred);
+    updateDueDate();
+	
+	$('#conceptionDate').datepicker("hide");
+	$("#conceptionDateDiv").hide();
+}

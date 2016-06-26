@@ -54,18 +54,33 @@
 		<!-- Initial App Page -->
 		<div data-role="page" id="startPage">
 			<div data-role="header" id="startPageHeaderDiv">
-				<h3 id="startPageHeaderText">Due Date Calculator</h3>
+				<h3 style="margin:0 0 0 0" id="startPageHeaderText">Due Date Calculator</h3>
 			</div>
 			<div id="startPageMainDiv" data-role="content" class="ui-content">
 				<div data-role="fieldcontain">
 					<label for="pregCheckDate" data-inline="true">Preg Check Date</label>
-					<input id="pregCheckDate" name="pregCheckDate" type="text" readonly="readonly" class="date-input" data-inline="false" data-role="date" onchange="updateDueDate()">
+					<input id="pregCheckDate" class="pregCheckDate" name="pregCheckDate" type="text" readonly="readonly" class="date-input" data-inline="false" data-role="date" onchange="updateDueDate()">
 				</div>
 
 				<div class="ui-field-contain">
-					<label for="daysBred">Days Bred</label>
-					<input type="text" data-role="spinbox" name="daysBred" id="daysBred" value="30" onchange="updateDueDate()"/>
+					<div class="ui-grid-c">
+						<div class="ui-block-a">
+							<label for="daysBred" data-inline="true" style="width: 28px">Days Bred</label>
+						</div>
+						<div class="ui-block-b">
+							<input type="text" data-role="spinbox" name="daysBred" id="daysBred" value="30" data-inline="true" onchange="updateDueDate()"/>
+						</div>
+						<div class="ui-block-c">
+							<a href="#" data-role="button" data-icon="calendar" data-iconpos="notext" data-inline="true" onclick="openConceptionDate()"></a>    
+						</div>
+					</div>
 				</div>
+					
+				<div class="ui-field-contain" id="conceptionDateDiv" style="display:none">
+					<label for="conceptionDate" data-inline="true" >Conception Date</label>
+					<input id="conceptionDate" name="conceptionDate" type="text" readonly="readonly" class="date-input" data-inline="false" data-role="date" onchange="setConceptionDate()">
+				</div>
+					
 
 				<div class="ui-field-contain">
 					<label for="dueDate">Due Date</label>
