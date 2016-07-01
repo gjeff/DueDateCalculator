@@ -9,10 +9,6 @@ var gestationPeriod = 283;    // Default the gestation period to Cows
 
 $(document).ready(function () {
 
-    $('#conceptionDate').on('hide', function(){
-    	debugger;
-        $('#conceptionDateDiv').hide();
-    });
 
 });
 
@@ -27,11 +23,14 @@ function initializeValues() {
 function updateDueDate() {
 
 	var dueDate = new Date;
+	var conceptionDate = new Date;
 	pregCheckDate = new Date($("#pregCheckDate").val());
 
 	dueDate.setDate(pregCheckDate.getDate() + (gestationPeriod - $("#daysBred").val()));
+	conceptionDate.setDate(pregCheckDate.getDate() - $("#daysBred").val());
 
 	$("#dueDate").val(formatDate(dueDate));
+	$("#conceptionDate").val(formatDate(conceptionDate));
 }
 
 function formatDate(inDate) {
