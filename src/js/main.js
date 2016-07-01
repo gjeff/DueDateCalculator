@@ -6,6 +6,16 @@
  --------------------------------------------------------- */
 var gestationPeriod = 283;    // Default the gestation period to Cows
 
+
+$(document).ready(function () {
+
+    $('#conceptionDate').on('hide', function(){
+    	debugger;
+        $('#conceptionDateDiv').hide();
+    });
+
+});
+
 function initializeValues() {
 
 	var today = new Date;
@@ -40,6 +50,13 @@ function updateGestationPeriod(){
 }
 
 function openConceptionDate(){
+
+	$('#conceptionDate').datepicker()
+    .on("hide", function(e) {
+    	debugger;
+        $("#conceptionDateDiv").hide();
+    });
+
 	$("#conceptionDateDiv").show();
 	$('#conceptionDate').datepicker("show");
 }
@@ -56,3 +73,5 @@ function setConceptionDate(){
 	$('#conceptionDate').datepicker("hide");
 	$("#conceptionDateDiv").hide();
 }
+
+
