@@ -19,7 +19,7 @@
 		<link rel="stylesheet" href="css/jquery.mobile.inline-png-1.4.5.min.css">
 		<link rel="stylesheet" href="css/jquery.mobile.inline-svg-1.4.5.min.css">
 
-		<link rel="stylesheet" href="css/themes/GrayTheme.min.css">
+		<link rel="stylesheet" href="css/themes/Zoe1.min.css">
 		<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css">		
 		<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css">
 <!--		<link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.min.css">   -->
@@ -57,6 +57,11 @@
 				<h3 style="margin:0 0 0 0" id="startPageHeaderText">Due Date Calculator</h3>
 			</div>
 			<div id="startPageMainDiv" data-role="content" class="ui-content">
+				<div class="ui-field-contain" id="conceptionDateDiv" style="display:none">
+					<label for="conceptionDate" data-inline="true" >Conception Date</label>
+					<input id="conceptionDate" name="conceptionDate" type="text" readonly="readonly" data-orientation="bottom" class="date-input" data-inline="false" data-role="date" onchange="setConceptionDate()">
+				</div>
+
 				<div data-role="fieldcontain">
 					<label for="pregCheckDate" data-inline="true">Preg Check Date</label>
 					<input id="pregCheckDate" class="pregCheckDate" name="pregCheckDate" type="text" readonly="readonly" class="date-input" data-inline="false" data-role="date" onchange="updateDueDate()">
@@ -76,10 +81,6 @@
 					</div>
 				</div>
 					
-				<div class="ui-field-contain" id="conceptionDateDiv" style="display:none">
-					<label for="conceptionDate" data-inline="true" >Conception Date</label>
-					<input id="conceptionDate" name="conceptionDate" type="text" readonly="readonly" data-orientation="bottom" class="date-input" data-inline="false" data-role="date" onchange="setConceptionDate()">
-				</div>
 					
 
 				<div class="ui-field-contain">
