@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.sofaspudsports.DueDateCalculator"
-        version   = "1.1.0">
+        version   = "1.2.0">
 
     <name>Due Date Calculator</name>
 
@@ -12,7 +12,7 @@
         Simple calculator to determine the Due Date based on pregnancy test date and an estimated conception date.  The app is designed for Veterinarians and is very easy to use for any species gestation period.
     </description>
 
-    <author href="http://phonegap.com" email="support@phonegap.com">
+    <author href="http://sofaspudsports.com" email="sofaspudsports@gmail.com">
         Jeff Bierman
     </author>
 

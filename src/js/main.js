@@ -26,8 +26,8 @@ function updateDueDate() {
 	var conceptionDate = new Date;
 	pregCheckDate = new Date($("#pregCheckDate").val());
 
-	dueDate.setDate(pregCheckDate.getDate() + (gestationPeriod - $("#daysBred").val()));
-	conceptionDate.setDate(pregCheckDate.getDate() - $("#daysBred").val());
+	dueDate.setTime(pregCheckDate.getTime() + ((gestationPeriod - $("#daysBred").val())*(24*60*60*1000) ));
+	conceptionDate.setTime(pregCheckDate.getTime() - ($("#daysBred").val()*(24*60*60*1000)));
 
 	$("#dueDate").val(formatDate(dueDate));
 	$("#conceptionDate").val(formatDate(conceptionDate));
